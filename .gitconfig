@@ -1,8 +1,10 @@
 [user]
-	name = Arnaud Didry
-	email = arnaud.didry@gmail.com
+    name = Arnaud Didry
+    email = arnaud@didry.info
 [color]
-	diff = auto
+    ui = auto
+    diff = auto
+
 [alias]
     st = status
     ci = commit
@@ -13,3 +15,4 @@
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     ls = ls-files
+
