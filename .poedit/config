@@ -1,0 +1,91 @@
+version=1.4.2
+translator_name=Arnaud Didry
+translator_email=arnaud.didry@univ-avignon.fr
+compile_mo=1
+show_summary=1
+manager_startup=0
+focus_to_text=0
+comment_window_editable=0
+ext_editor=
+open_editor_immediately=0
+keep_crlf=1
+enable_spellchecking=1
+custom_font_list_use=0
+custom_font_text_use=0
+custom_font_list_name=
+custom_font_text_name=
+crlf_format=unix
+use_tm_when_updating=1
+summary_pos_x=750
+summary_pos_y=461
+summary_pos_w=419
+summary_pos_h=202
+progress_pos_x=818
+progress_pos_y=466
+frame_maximized=1
+splitter=893
+display_quotes=0
+display_lines=0
+display_comment_win=0
+display_auto_comments_win=0
+shaded_list=1
+file1=i18n/de/LC_MESSAGES/default.po
+file2=/media/data/dev/filez-github/i18n/de/LC_MESSAGES/default.po
+file3=i18n/es/LC_MESSAGES/default.po
+file4=/media/data/dev/filez-github/i18n/es/LC_MESSAGES/default.po
+file5=/media/data/dev/filez-github/i18n/en/LC_MESSAGES/default.po
+file6=i18n/fr/LC_MESSAGES/default.po
+file7=/media/data/dev/filez-github/i18n/fr/LC_MESSAGES/default.po
+file8=
+file9=
+[Parsers]
+List=C/C++;C#;Java;Perl;PHP;Python;TCL
+DefaultsVersion=1.4.2
+[Parsers/C_C\+\+]
+Extensions=*.c;*.cpp;*.h;*.hpp;*.cc;*.C;*.cxx;*.hxx
+Command=xgettext --force-po -o %o %C %K %F
+KeywordItem=-k%k
+FileItem=%f
+CharsetItem=--from-code=%c
+[Parsers/C\#]
+Extensions=*.cs
+Command=xgettext --force-po -o %o %C %K %F
+KeywordItem=-k%k
+FileItem=%f
+CharsetItem=--from-code=%c
+[Parsers/Java]
+Extensions=*.java
+Command=xgettext --force-po -o %o %C %K %F
+KeywordItem=-k%k
+FileItem=%f
+CharsetItem=--from-code=%c
+[Parsers/Perl]
+Extensions=*.pl
+Command=xgettext --force-po -o %o %C %K %F
+KeywordItem=-k%k
+FileItem=%f
+CharsetItem=--from-code=%c
+[Parsers/PHP]
+Extensions=*.php
+Command=xgettext --force-po -o %o %C %K %F
+KeywordItem=-k%k
+FileItem=%f
+CharsetItem=--from-code=%c
+[Parsers/Python]
+Extensions=*.py
+Command=xgettext --force-po -o %o %C %K %F
+KeywordItem=-k%k
+FileItem=%f
+CharsetItem=--from-code=%c
+[Parsers/TCL]
+Extensions=*.tcl
+Command=xgettext --force-po -o %o %C %K %F
+KeywordItem=-k%k
+FileItem=%f
+CharsetItem=--from-code=%c
+[TM]
+database_path=/home/didrya/.poedit/tm
+search_paths=/home/didrya:/usr/share/locale:/usr/local/share/locale
+languages=
+max_omitted=2
+max_delta=2
