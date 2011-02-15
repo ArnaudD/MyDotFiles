@@ -41,6 +41,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# private aliases (non versionned)
+if [ -f ~/.bash_private_aliases ]; then
+      . ~/.bash_private_aliases
+fi
+
 # enable color support of ls and also add handy aliases
 if [ "$TERM" != "dumb" ]; then
     eval "`dircolors -b`"
