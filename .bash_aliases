@@ -53,6 +53,8 @@ connect_adhoc () {
 
 alias wol_avignon='wakeonlan -i rno-server.homeip.net 00:19:66:33:D3:FA'
 
+alias ldap_tunnel='sudo ssh -L smtp.univ-avignon.fr:25:smtp.univ-avignon.fr:25 -L ldap.univ-avignon.fr:389:ldap.univ-avignon.fr:389 didrya@in.univ-avignon.fr'
+
 # Alias de navigation
 # -------------------
 
