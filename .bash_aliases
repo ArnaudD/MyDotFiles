@@ -87,4 +87,8 @@ alias logwatch='watch --interval 1 tail -n 30'
 alias untargz='tar -zxvf'
 alias untarbz2='tar -jxvf'
 
+alias apt-update='sudo apt-get update'
+alias apt-upgrade='sudo apt-get upgrade'
+alias apt-install='sudo apt-get install'
+alias apt-search='sudo apt-cache search'
 
