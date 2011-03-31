@@ -10,6 +10,7 @@ export GREP_OPTIONS="--exclude-dir=\*.svn\*"
 export PATH=.:$PATH:/media/data/apps/google_appengine/lib/django/django/bin
 export PATH=.:$PATH:/media/data/apps/netbeans-6.8/bin
 export PATH=.:$PATH:/var/lib/gems/1.8/bin/
+export PATH=.:$PATH:/media/data/apps/android-sdk-linux_x86/platform-tools
 
 
 # check the window size after each command and, if necessary,

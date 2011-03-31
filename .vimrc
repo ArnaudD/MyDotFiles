@@ -1,3 +1,8 @@
+" pour coffeescript
+filetype off
+call pathogen#runtime_append_all_bundles()
+filetype plugin indent on
+
 set paste
 set backspace=indent,eol,start  " backspace over everything in insert mode
 set ruler                       " show the cursor position all the time
@@ -13,7 +18,9 @@ vmap // y/<C-R>"<CR>
 map <F12> :set number!<CR>
 colorscheme elflord              " set colorscheme
 if has("gui_running")
-    colorscheme desert              " set colorscheme
+    set background=dark
+    colorscheme solarized
+   "colorscheme desert              " set colorscheme
 endif
 
 set mouse=a
@@ -26,6 +33,7 @@ nmap <C-t> :tabnew<cr>
 imap <C-t> <ESC>:tabnew<cr>
 
 set tags=tags;/ " This will look in the current directory for "tags", and work up the tree towards root until one is found.
+
 
 " C-] - go to definition
 " C-T - Jump back from the definition.
@@ -178,14 +186,12 @@ if has("gui_running")
 "                "set gfn=-adobe-courier-medium-r-normal-*-*-140-*-*-m-*-iso8859-15
 "                set guifont=Courier\ 12
                  "set gfn=Bitstream\ Vera\ Sans\ Mono\ 9
-                 set guifont=Bitstream\ Vera\ Sans\ Mono\ 9
-                 "set guifont=ProggySquareTTSZ\ 12
+                 set guifont=Monospace\ 9
 "                set guioptions=gimrLtTa
 "        endif
 "
         " Choix d'un theme de coloration
         "colorscheme pablo
-        colorscheme desert
 endif
 
 " ??? how many lines to sync backwards
@@ -460,8 +466,9 @@ if has("autocmd")
     " {{{ 11.2 En fonction du type de fichier
     autocmd FileType text setlocal textwidth=78 nocindent
     autocmd FileType html set formatoptions+=tl
-    autocmd FileType css set smartindent noexpandtab tabstop=2
+    autocmd FileType css set smartindent noexpandtab tabstop=2 shiftwidth=2
     autocmd FileType php set expandtab tabstop=4
+    autocmd FileType coffee set smartindent expandtab tabstop=2 shiftwidth=2
     "autocmd FileType c,cpp,slang set cindent
     autocmd FileType html,xml,xsl source ~/.vim/scripts/closetag.vim
     autocmd FileType py source ~/.vim/scripts/python.vim
