@@ -63,8 +63,8 @@ set nocompatible
 " ne fait pas un bip lors d'une erreur
 set noerrorbells
 
-" Fait clignoter l'écran lors d'une erreur de saisie, de commande etc...
-set visualbell
+" NE Fait PAS clignoter l'écran lors d'une erreur de saisie, de commande etc...
+set novisualbell
 
 " Active les plugins et les indeantaions par type de fichier
 filetype plugin indent on
