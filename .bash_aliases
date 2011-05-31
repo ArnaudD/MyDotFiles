@@ -2,6 +2,8 @@
 # Alias Dev
 # ---------
 
+alias git='hub'
+
 alias gvi='gvim'
 
 alias modified='svn st | grep "^M"'
