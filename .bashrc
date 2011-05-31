@@ -7,10 +7,11 @@
 # ... and ignore same sucessive entries.
 export HISTCONTROL=ignoreboth
 export GREP_OPTIONS="--exclude-dir=\*.svn\*"
-export PATH=/usr/local/stow/php-5.2.11/bin:$PATH
+export PATH=$PATH:.
 export PATH=$PATH:/media/data/apps/netbeans-6.8/bin
 export PATH=$PATH:/var/lib/gems/1.8/bin/
 export PATH=$PATH:/media/data/apps/android-sdk-linux_x86/platform-tools
+export PATH=$PATH:/usr/local/stow/php-5.2.11/bin
 
 export DRUSH_PHP=/usr/local/stow/php-5.2.11/bin/php
 
