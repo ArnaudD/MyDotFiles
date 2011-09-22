@@ -34,6 +34,11 @@ imap <C-t> <ESC>:tabnew<cr>
 
 set tags=tags;/ " This will look in the current directory for "tags", and work up the tree towards root until one is found.
 
+" Tips & Tricks from http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks
+
+" Use :w!! to write to a file using sudo if you forgot it
+cmap w!! %!sudo tee > /dev/null %
+
 
 " C-] - go to definition
 " C-T - Jump back from the definition.
@@ -105,13 +110,13 @@ set autoindent
 set expandtab
 
 " Nombre d'espace pour une tabulation
-set shiftwidth=4
+set shiftwidth=3
 
 " if non-zero, number of spaces to insert for a <tab>
-set softtabstop=4
+set softtabstop=3
 
 " number of spaces the tab stands for
-set tabstop=4
+set tabstop=3
 
 " some nice options for cindenting  by FOLKE
 " set cinoptions={.5s,+.5s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
