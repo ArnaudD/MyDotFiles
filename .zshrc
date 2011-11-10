@@ -1,6 +1,6 @@
 
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="robbyrussell"
+ZSH_THEME="steeef"
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(git)
@@ -17,9 +17,5 @@ alias ....='cd ../../..'
 alias reloadenv='source ~/.zshrc'
 alias isrunning='ps alx | grep'
 alias killalllike='kill `isrunning $1 | cut -d" " -f 4`'
-alias jslint='java org.mozilla.javascript.tools.shell.Main'
 
-. /sw/bin/init.sh
-
-[[ -s "/Users/arnauddidry/.rvm/scripts/rvm" ]] && source "/Users/arnauddidry/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
