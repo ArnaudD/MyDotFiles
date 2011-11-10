@@ -34,12 +34,6 @@ imap <C-t> <ESC>:tabnew<cr>
 
 set tags=tags;/ " This will look in the current directory for "tags", and work up the tree towards root until one is found.
 
-" Tips & Tricks from http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks
-
-" Use :w!! to write to a file using sudo if you forgot it
-cmap w!! %!sudo tee > /dev/null %
-
-
 " Tricks from http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks
 
 " Use :w!! to write to a file using sudo if you forgot it
