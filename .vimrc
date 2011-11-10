@@ -40,6 +40,11 @@ set tags=tags;/ " This will look in the current directory for "tags", and work u
 cmap w!! %!sudo tee > /dev/null %
 
 
+" Tricks from http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks
+
+" Use :w!! to write to a file using sudo if you forgot it
+cmap w!! %!sudo tee > /dev/null %
+
 " C-] - go to definition
 " C-T - Jump back from the definition.
 " C-W C-] - Open the definition in a horizontal split
