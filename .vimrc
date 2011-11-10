@@ -110,13 +110,13 @@ set autoindent
 set expandtab
 
 " Nombre d'espace pour une tabulation
-set shiftwidth=3
+set shiftwidth=4
 
 " if non-zero, number of spaces to insert for a <tab>
-set softtabstop=3
+set softtabstop=4
 
 " number of spaces the tab stands for
-set tabstop=3
+set tabstop=4
 
 " some nice options for cindenting  by FOLKE
 " set cinoptions={.5s,+.5s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
@@ -521,6 +521,10 @@ endif
 
 "}}}
 
+
+
+" ClicRdv specific
+autocmd FileType js set smartindent expandtab tabstop=3 shiftwidth=3 softtabstop=3
 
 " vim:fdm=marker
 
