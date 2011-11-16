@@ -40,6 +40,11 @@ set tags=tags;/ " This will look in the current directory for "tags", and work u
 " Use :w!! to write to a file using sudo if you forgot it
 cmap w!! %!sudo tee > /dev/null %
 
+" FuzzyFinder
+nmap ,f :FufFileWithCurrentBufferDir<CR>
+nmap ,b :FufBuffer<CR>
+nmap ,t :FufTaggedFile<CR>
+
 " C-] - go to definition
 " C-T - Jump back from the definition.
 " C-W C-] - Open the definition in a horizontal split
