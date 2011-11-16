@@ -55,6 +55,10 @@ map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 " C-\ - Open the definition in a new tab
 " A-] - Open the definition in a vertical split
 
+" Enable per project .vimrc
+set exrc
+set secure
+
 " After the tags are generated. You can use the follwoing keys to tag into and tag out of funcitons:
 " Ctrl-Left_MouseClick - Go to defenition
 " Ctrl-Right_MouseClick - Jump back from definition
