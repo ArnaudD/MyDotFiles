@@ -1,9 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/media/data/dev/FileZ/lib/Fz'
-let g:netrw_dirhist_2='/media/data/dev/FileZ/lib/Fz/Db'
-let g:netrw_dirhist_3='/etc/apache2/sites-enabled'
-let g:netrw_dirhist_4='/etc/php5/apache2'
-let g:netrw_dirhist_5='/media/data/dev/drbladmin2/apps/backend/modules/drbl_server'
-let g:netrw_dirhist_6='/media/data/dev/drbladmin2/apps/backend/modules/drbl_server/config'
-let g:netrw_dirhist_7='/media/data/dev/drbladmin2/data/fixtures'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/Users/arnauddidry/.vagrant.d'
+let g:netrw_dirhist_2='/Users/arnauddidry/clicrdv-dev'
