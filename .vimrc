@@ -1,29 +1,59 @@
-" pour coffeescript
-filetype off
-call pathogen#runtime_append_all_bundles()
-filetype plugin indent on
+" -----------------------------------------------------------
+" Vundle config
+" -----------------------------------------------------------
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+"Bundle 'tpope/vim-fugitive'
+"Bundle 'Lokaltog/vim-easymotion'
+"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Bundle 'tpope/vim-rails.git'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'sickill/vim-pasta'
+" Bundle 'git://git.wincent.com/command-t.git'
+
+filetype plugin indent on     " required! 
+
+" -----------------------------------------------------------
+" Plugin config
+" -----------------------------------------------------------
+
+" FuzzyFinder
+nmap ,f :FufFileWithCurrentBufferDir<CR>
+nmap ,b :FufBuffer<CR>
+nmap ,t :FufTaggedFile<CR>
+
+" -----------------------------------------------------------
+" -----------------------------------------------------------
 
 set paste
 set backspace=indent,eol,start  " backspace over everything in insert mode
 set ruler                       " show the cursor position all the time
 set showcmd                     " display incomplete commands
 set incsearch                   " do incremental searching
-"set autowrite                   " save file when changing buffer
-set smartindent                 " idem
+set smartindent
+set mouse=a
 
-" visual searching : search for visually highlighted text
-vmap // y/<C-R>"<CR>
-
-" map F12 to switch linenumber showing
-map <F12> :set number!<CR>
 colorscheme elflord              " set colorscheme
 if has("gui_running")
     set background=dark
     colorscheme solarized
-   "colorscheme desert              " set colorscheme
 endif
 
-set mouse=a
+
+" -----------------------------------------------------------
+" Remap
+" -----------------------------------------------------------
 
 map <S-tab> :tabnext<cr>
 nmap <S-tab> :tabnext<cr>
@@ -32,37 +62,49 @@ imap <S-tab> <ESC>:tabnext<cr>i
 nmap <C-t> :tabnew<cr>
 imap <C-t> <ESC>:tabnew<cr>
 
-set tags=tags;/ " This will look in the current directory for "tags", and work up the tree towards root until one is found.
+" visual searching : search for visually highlighted text
+vmap // y/<C-R>"<CR>
+
+" map F12 to switch linenumber showing
+map <F12> :set number!<CR>
 
 
+" -----------------------------------------------------------
 " Tricks from http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks
+" -----------------------------------------------------------
 
 " Use :w!! to write to a file using sudo if you forgot it
 cmap w!! %!sudo tee > /dev/null %
 
-" FuzzyFinder
-nmap ,f :FufFileWithCurrentBufferDir<CR>
-nmap ,b :FufBuffer<CR>
-nmap ,t :FufTaggedFile<CR>
+
+" -----------------------------------------------------------
+" Tags
+" -----------------------------------------------------------
+
+set tags=tags;/ " This will look in the current directory for "tags", and work up the tree towards root until one is found.
 
 " C-] - go to definition
 " C-T - Jump back from the definition.
 " C-W C-] - Open the definition in a horizontal split
 
-" Add these lines in vimrc
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " C-\ - Open the definition in a new tab
 " A-] - Open the definition in a vertical split
 
-" Enable per project .vimrc
-set exrc
-set secure
-
 " After the tags are generated. You can use the follwoing keys to tag into and tag out of funcitons:
 " Ctrl-Left_MouseClick - Go to defenition
 " Ctrl-Right_MouseClick - Jump back from definition
+
+
+" -----------------------------------------------------------
+" Conf
+" -----------------------------------------------------------
+
+" Enable per project .vimrc
+set exrc
+set secure
 
 " -----------------------------------------------------------
 " {{{ 0. General setup
@@ -70,9 +112,6 @@ set secure
 
 " enable backspace to delete anyting (includes \n) in insert mode
 set backspace=2
-
-" On n'assura pas la compatiblité avec VI et c'est tant mieux !
-set nocompatible
 
 " ne fait pas un bip lors d'une erreur
 set noerrorbells
