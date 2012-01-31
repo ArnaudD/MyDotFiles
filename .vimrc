@@ -10,63 +10,19 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-"Bundle 'tpope/vim-fugitive'
-"Bundle 'Lokaltog/vim-easymotion'
-"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-"Bundle 'tpope/vim-rails.git'
+" Bundle 'tpope/vim-fugitive'
+" Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Bundle 'tpope/vim-rails.git'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'sickill/vim-pasta'
-" Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on     " required! 
-
-" -----------------------------------------------------------
-" Plugin config
-" -----------------------------------------------------------
-
-" FuzzyFinder
-nmap ,f :FufFileWithCurrentBufferDir<CR>
-nmap ,b :FufBuffer<CR>
-nmap ,t :FufTaggedFile<CR>
-
-" -----------------------------------------------------------
-" -----------------------------------------------------------
-
-set paste
-set backspace=indent,eol,start  " backspace over everything in insert mode
-set ruler                       " show the cursor position all the time
-set showcmd                     " display incomplete commands
-set incsearch                   " do incremental searching
-set smartindent
-set mouse=a
-
-colorscheme elflord              " set colorscheme
-if has("gui_running")
-    set background=dark
-    colorscheme solarized
-endif
-
-
-" -----------------------------------------------------------
-" Remap
-" -----------------------------------------------------------
-
-map <S-tab> :tabnext<cr>
-nmap <S-tab> :tabnext<cr>
-imap <S-tab> <ESC>:tabnext<cr>i
-
-nmap <C-t> :tabnew<cr>
-imap <C-t> <ESC>:tabnew<cr>
-
-" visual searching : search for visually highlighted text
-vmap // y/<C-R>"<CR>
-
-" map F12 to switch linenumber showing
-map <F12> :set number!<CR>
 
 
 " -----------------------------------------------------------
@@ -75,36 +31,6 @@ map <F12> :set number!<CR>
 
 " Use :w!! to write to a file using sudo if you forgot it
 cmap w!! %!sudo tee > /dev/null %
-
-
-" -----------------------------------------------------------
-" Tags
-" -----------------------------------------------------------
-
-set tags=tags;/ " This will look in the current directory for "tags", and work up the tree towards root until one is found.
-
-" C-] - go to definition
-" C-T - Jump back from the definition.
-" C-W C-] - Open the definition in a horizontal split
-
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-
-" C-\ - Open the definition in a new tab
-" A-] - Open the definition in a vertical split
-
-" After the tags are generated. You can use the follwoing keys to tag into and tag out of funcitons:
-" Ctrl-Left_MouseClick - Go to defenition
-" Ctrl-Right_MouseClick - Jump back from definition
-
-
-" -----------------------------------------------------------
-" Conf
-" -----------------------------------------------------------
-
-" Enable per project .vimrc
-set exrc
-set secure
 
 " -----------------------------------------------------------
 " {{{ 0. General setup
@@ -118,9 +44,6 @@ set noerrorbells
 
 " NE Fait PAS clignoter l'écran lors d'une erreur de saisie, de commande etc...
 set novisualbell
-
-" Active les plugins et les indeantaions par type de fichier
-filetype plugin indent on
 
 " Quand on tape un ), vim montre furtivement le ( correspondant.
 set showmatch
@@ -143,6 +66,17 @@ if has("gui_running")
 endif
 
 set foldmethod=marker
+
+" Enable per project .vimrc
+set exrc
+set secure
+
+" display incomplete commands
+set showcmd
+
+set paste
+set backspace=indent,eol,start  " backspace over everything in insert mode
+set mouse=a
 
 " }}}
 
@@ -173,7 +107,7 @@ set tabstop=4
 set smarttab
 
 " smartindenting (clever autoindenting)
-set si
+set smartindent
 
 
 " }}}
@@ -211,6 +145,30 @@ set incsearch
 " !!! turn off the fucking :s///gc toggling
 "set noedcompatible
 
+" Tags ---
+
+set tags=tags;/ " This will look in the current directory for "tags", and work up the tree towards root until one is found.
+
+" C-] - go to definition
+" C-T - Jump back from the definition.
+" C-W C-] - Open the definition in a horizontal split
+
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+" C-\ - Open the definition in a new tab
+" A-] - Open the definition in a vertical split
+
+" After the tags are generated. You can use the follwoing keys to tag into and tag out of funcitons:
+" Ctrl-Left_MouseClick - Go to defenition
+" Ctrl-Right_MouseClick - Jump back from definition
+
+" FuzzyFinder ---
+nmap ,f :FufFileWithCurrentBufferDir<CR>
+nmap ,b :FufBuffer<CR>
+nmap ,t :FufTaggedFile<CR>
+
+
 " }}}
 
 
@@ -222,6 +180,9 @@ set incsearch
 if &t_Co > 2 || has("gui_running")
         syntax on
 endif
+
+" set console colorscheme
+colorscheme elflord
 
 if has("gui_running")
 
@@ -243,8 +204,11 @@ if has("gui_running")
 "                set guioptions=gimrLtTa
 "        endif
 "
-        " Choix d'un theme de coloration
-        "colorscheme pablo
+
+    " set gui colorscheme
+    set background=dark
+    colorscheme solarized
+
 endif
 
 " ??? how many lines to sync backwards
@@ -314,6 +278,7 @@ endif
 set splitbelow
 
 " }}}
+
 
 " -----------------------------------------------------------
 " {{{ 6.Sauvegarde
@@ -500,6 +465,16 @@ if has("gui_running")
     endif
 endif
 
+map <S-tab> :tabnext<cr>
+nmap <S-tab> :tabnext<cr>
+imap <S-tab> <ESC>:tabnext<cr>i
+
+" visual searching : search for visually highlighted text
+vmap // y/<C-R>"<CR>
+
+" map F12 to switch linenumber showing
+map <F12> :set number!<CR>
+
 " }}}
 
 
@@ -571,6 +546,3 @@ endif
 
 
 " vim:fdm=marker
-
-
-
