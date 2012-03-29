@@ -11,7 +11,6 @@ grep-edit () {
     gvim `grep $1 $2 -R --color=never | cut -d: -f1 | uniq` -p
 }
 
-alias gvim='/Applications/mvim'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias reloadenv='source ~/.zshrc'
