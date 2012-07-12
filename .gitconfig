@@ -24,6 +24,8 @@
   # Tell Git which whitespace problems it should recognize, namely any whitespace at the end of a line, as well as mixed spaces and tabs
   whitespace = trailing-space,space-before-tab
 
+  autocrlf = input
+
 [branch]
   # When branching off a remote branch, automatically let the local branch track the remote branch
   autosetupmerge = true

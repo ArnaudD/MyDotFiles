@@ -5,8 +5,6 @@ COMPLETION_WAITING_DOTS="true"
 
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
-
 grep-edit () {
     gvim `grep $1 $2 -R --color=never | cut -d: -f1 | uniq` -p
 }
@@ -19,4 +17,16 @@ alias isrunning='ps alx | grep'
 alias killalllike='kill `isrunning $1 | cut -d" " -f 4`'
 
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+# Alias definitions.
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# private aliases (non versionned)
+if [ -f ~/.bash_private_aliases ]; then
+    . ~/.bash_private_aliases
+fi
+
+[[ -s "/usr/local/rvm/scripts/rvm" ]] && . "/usr/local/rvm/scripts/rvm" 
+
+source $ZSH/oh-my-zsh.sh
