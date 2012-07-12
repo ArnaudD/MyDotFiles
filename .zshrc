@@ -15,12 +15,6 @@ alias reloadenv='source ~/.zshrc'
 alias isrunning='ps alx | grep'
 alias killalllike='kill `isrunning $1 | cut -d" " -f 4`'
 
-
-# Alias definitions.
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
 # private aliases (non versionned)
 if [ -f ~/.bash_private_aliases ]; then
     . ~/.bash_private_aliases
