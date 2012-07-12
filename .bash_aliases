@@ -6,6 +6,8 @@ alias git='hub'
 
 alias gvi='gvim'
 
+alias ack='ack-grep'
+
 alias modified='svn st | grep "^M"'
 
 alias sfpba='./symfony propel:build --all-classes'
