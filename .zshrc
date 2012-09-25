@@ -15,6 +15,9 @@ alias reloadenv='source ~/.zshrc'
 alias isrunning='ps alx | grep'
 alias killalllike='kill `isrunning $1 | cut -d" " -f 4`'
 
+export PATH=$PATH:~/bin/
+export PATH=$PATH:/media/data/dev/depot_tools
+
 # private aliases (non versionned)
 if [ -f ~/.bash_private_aliases ]; then
     . ~/.bash_private_aliases
