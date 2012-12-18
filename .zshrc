@@ -1,4 +1,3 @@
-
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="steeef"
 COMPLETION_WAITING_DOTS="true"
@@ -9,6 +8,10 @@ source $ZSH/oh-my-zsh.sh
 
 grep-edit () {
     gvim `grep $1 $2 -R --color=never | cut -d: -f1 | uniq` -p
+}
+
+mkcd () {
+    mkdir -p "$@" && cd "$@"
 }
 
 alias ...='cd ../..'
