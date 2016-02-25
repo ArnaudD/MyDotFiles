@@ -1,1 +1,1 @@
-ls -a MyDotFiles | grep -vP "install|\.git|\.\.|\.$" | xargs -I '{}' ln -nfsv  `pwd`'/MyDotFiles/{}' {}
+ls -a MyDotFiles | grep -vP "install|\.git$|\.gitignore|\.gitmodules|\.\.|\.$" | xargs -I '{}' ln -nfsv  `pwd`'/MyDotFiles/{}' {}
