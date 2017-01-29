@@ -1,5 +1,7 @@
+fpath=($fpath "$HOME/MyDotFiles/zfunctions")
+
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="steeef"
+ZSH_THEME="pure"
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(git)
