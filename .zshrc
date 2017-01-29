@@ -32,3 +32,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 alias prp='git pull --rebase && git push'
 
 export PATH="$HOME/.yarn/bin:$PATH"
+
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
