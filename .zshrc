@@ -26,3 +26,7 @@ export PATH=$PATH:~/Apps/android-sdk/sdk/platform-tools
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+alias prp='git pull --rebase && git push'
+
+export PATH="$HOME/.yarn/bin:$PATH"
