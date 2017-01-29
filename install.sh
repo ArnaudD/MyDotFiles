@@ -1,1 +1,3 @@
-ls -a MyDotFiles | grep -vP "install|\.git|\.\.|\.$" | xargs -I '{}' ln -nfsv  `pwd`'/MyDotFiles/{}' {}
+ls -a MyDotFiles | grep -vP "install|config|\.git|\.\.|\.$" | xargs -I '{}' ln -nfsv  `pwd`'/MyDotFiles/{}' {}
+ls -a MyDotFiles/config | grep -vP "\.\.|\.$" | xargs -I '{}' ln -nfsv  `pwd`'/MyDotFiles/config/{}' .config/{}
+
