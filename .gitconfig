@@ -1,6 +1,6 @@
 [user]
   name = Arnaud Didry
-  email = arnaud@didry.info
+  email = arnaud@fizix.io
 
 [color]
   ui = auto
@@ -8,7 +8,7 @@
 
 [alias]
   st = status
-  ci = commit
+  ci = commit -v
   br = branch
   co = checkout
   df = diff

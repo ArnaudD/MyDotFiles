@@ -1,5 +1,7 @@
+fpath=($fpath "$HOME/MyDotFiles/zfunctions")
+
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="steeef"
+ZSH_THEME="pure"
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(git)
@@ -26,3 +28,9 @@ export PATH=$PATH:~/Apps/android-sdk/sdk/platform-tools
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+alias prp='git pull --rebase && git push'
+
+export PATH="$HOME/.yarn/bin:$PATH"
+
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
