@@ -30,8 +30,17 @@
 
 [push]
   # When pushing without giving a refspec, push the current branch to its upstream branch
-  default = tracking 
+  default = simple 
 
 [rerere]
   # Enable the recording of resolved conflicts, so that identical hunks can be resolved automatically later on.
   enabled = true
+[merge]
+	tool = meld
+[mergetool "meld"]
+	cmd = meld
+	trustExitCode = false
+[diff]
+	tool = meld
+[difftool "meld"]
+	cmd = meld
