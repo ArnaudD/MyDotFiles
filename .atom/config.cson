@@ -1,0 +1,29 @@
+"*":
+  core:
+    audioBeep: false
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      "node_modules"
+    ]
+    telemetryConsent: "limited"
+  editor:
+    fontFamily: "Fira Code"
+    invisibles: {}
+    showInvisibles: true
+    softWrap: true
+  "exception-reporting":
+    userId: "8067a808-e8ca-4b64-8000-b9d158509022"
+  jsformat:
+    format_on_save: false
+  "linter-ui-default":
+    showPanel: true
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
