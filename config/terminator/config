@@ -1,23 +1,26 @@
 [global_config]
-  title_transmit_fg_color = "#f0f0f0"
-  title_transmit_bg_color = "#171717"
-  title_inactive_fg_color = "#f0f0f0"
   title_inactive_bg_color = "#38252c"
-
-[profiles]
-  [[default]]
-    palette = "#171717:#c83636:#acd94c:#ffa800:#2b7ea7:#bd3a7c:#298473:#ebebeb:#38252c:#e13131:#90d14c:#e1a126:#3797c6:#ce297b:#1ba88f:#c8dee9"
-    foreground_color = "#f0f0f0"
-    background_color = "#171717"
-    cursor_color = "#f0f0f0"
-
+  title_inactive_fg_color = "#f0f0f0"
+  title_transmit_bg_color = "#171717"
+  title_transmit_fg_color = "#f0f0f0"
+[keybindings]
 [layouts]
   [[default]]
     [[[child1]]]
-      type = Terminal
       parent = window0
       profile = default
+      type = Terminal
     [[[window0]]]
-      type = Window
       parent = ""
+      type = Window
 [plugins]
+[profiles]
+  [[default]]
+    background_color = "#171717"
+    background_image = None
+    cursor_color = "#f0f0f0"
+    font = "Input Mono Condensed, Condensed 10"
+    foreground_color = "#f0f0f0"
+    palette = "#171717:#c83636:#acd94c:#ffa800:#2b7ea7:#bd3a7c:#298473:#ebebeb:#676767:#e13131:#90d14c:#e1a126:#3797c6:#ce297b:#1ba88f:#c8dee9"
+    scrollback_lines = 50000
+    use_system_font = False

@@ -36,7 +36,7 @@ alias mvi='noglob zmv -W'
 
 alias isrunning='ps alx | grep'
 
-alias killalllike='kill `isrunning $1 | cut -d" " -f 4`'
+alias killalllike='kill $(ps -o pid -o command ax | grep "$1" | cut -c1-6)'
 
 alias apt='sudo apt-get'
 alias upgrade='sudo apt-get update && sudo apt-get dist-upgrade'
