@@ -1,5 +1,5 @@
 fpath=($fpath "$HOME/MyDotFiles/zfunctions")
-fpath+=$HOME/.zsh/pureZSH=$HOME/.oh-my-zsh
+fpath+=$HOME/MyDotFiles/pure-zsh
 
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME=""

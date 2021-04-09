@@ -14,11 +14,15 @@
     telemetryConsent: "limited"
   editor:
     fontFamily: "Fira Code"
+    fontSize: 15
     invisibles: {}
     showInvisibles: true
     softWrap: true
   "exception-reporting":
     userId: "8067a808-e8ca-4b64-8000-b9d158509022"
+  "fuzzy-finder":
+    scoringSystem: "fast"
+    useRipGrep: true
   jsformat:
     format_on_save: false
   "linter-ui-default":
