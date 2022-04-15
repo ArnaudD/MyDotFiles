@@ -1,9 +1,9 @@
 [submodule ".vim/bundle/vundle"]
 	path = .vim/bundle/vundle
-	url = git://github.com/gmarik/vundle.git
+	url = https://github.com/gmarik/vundle.git
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
-	url = git://github.com/robbyrussell/oh-my-zsh.git
+	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "pure-zsh"]
 	path = pure-zsh
-	url = git@github.com:sindresorhus/pure.git
+	url = https://github.com/sindresorhus/pure.git
