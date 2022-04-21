@@ -1,3 +1,5 @@
+#!/bin/bash
+
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ls -a $CURRENT_DIR | grep -vP "atom|install|config|\.gitignore|\.gitmodules|\.git|.ssh|\.\.|\.$" | xargs -I '{}' ln -nfsv  $CURRENT_DIR'/{}' ~/{}
