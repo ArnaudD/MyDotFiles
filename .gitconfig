@@ -32,6 +32,7 @@
 [push]
   # When pushing without giving a refspec, push the current branch to its upstream branch
   default = simple 
+  autoSetupRemote = true
 
 [rerere]
   # Enable the recording of resolved conflicts, so that identical hunks can be resolved automatically later on.
